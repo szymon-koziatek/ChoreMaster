@@ -1,0 +1,21 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build ChoreMaster",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++11",
+                "-I${workspaceFolder}/Headers",
+                "${workspaceFolder}/Sources/main.cpp",
+                "${workspaceFolder}/Sources/fileacces.cpp", // Critical addition
+                "-o",
+                "${workspaceFolder}/choremaster"
+            ],
+            "group": "build",
+            "problemMatcher": "$gcc"
+        }
+    ]
+}

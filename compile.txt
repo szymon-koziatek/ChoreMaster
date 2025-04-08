@@ -1,0 +1,1 @@
+g++ -std=c++11 -IHeaders Sources/main.cpp Sources/fileacces.cpp Sources/logic.cpp Sources/render.cpp -o choremaster
