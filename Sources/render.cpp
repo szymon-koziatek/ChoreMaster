@@ -59,5 +59,14 @@ void Render::displayMenu() {
          << "\n5. Delete Task"
          << "\n6. Toggle Task Completion"
          << "\n7. Toggle Subtask Completion"
-         << "\n8. Exit" << std::endl;
+         << "\n8. Start Pomodoro Session"
+         << "\n9. Exit" << std::endl;
+}
+
+void Render::showPomodoroMenu() {
+    std::cout << "\nPomodoro Technique Options:"
+              << "\na. Start 25min Work Session"
+              << "\nb. Start 5min Break"
+              << "\nc. Start Full Pomodoro Cycle (4x25min + breaks)"
+              << "\nd. Return to Main Menu" << std::endl;
 }

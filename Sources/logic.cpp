@@ -1,5 +1,6 @@
 #include "../Headers/logic.hpp"
 #include "../Headers/render.hpp"
+#include "../Headers/pomodoro.hpp"
 #include <iostream>
 
 void Logic::addNewTask(std::vector<Task>& tasks) {
@@ -87,6 +88,31 @@ void Logic::handleUserChoice(int choice, std::vector<Task>& tasks) {
             std::cin >> subtaskIndex;
             std::cin.ignore();
             toggleSubtaskCompletion(tasks, taskIndex-1, subtaskIndex-1);
+            break;
+        case 8: {
+            char pomodoroChoice;
+            do {
+                Render::showPomodoroMenu();
+                std::cout << "Enter choice: ";
+                std::cin >> pomodoroChoice;
+                std::cin.ignore();
+                handlePomodoroChoice(pomodoroChoice);
+            } while(pomodoroChoice != 'd');
+            break;
+        }
+    }
+}
+
+void Logic::handlePomodoroChoice(char choice) {
+    switch(choice) {
+        case 'a':
+            Pomodoro::startSession(25);
+            break;
+        case 'b':
+            Pomodoro::startSession(5);
+            break;
+        case 'c':
+            Pomodoro::startPomodoro();
             break;
     }
 }

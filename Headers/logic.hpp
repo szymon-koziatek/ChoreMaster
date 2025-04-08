@@ -8,4 +8,5 @@ namespace Logic {
     void markTaskCompleted(std::vector<Task>& tasks, int index);
     void toggleSubtaskCompletion(std::vector<Task>& tasks, int taskIndex, int subtaskIndex);
     void handleUserChoice(int choice, std::vector<Task>& tasks);
+    void handlePomodoroChoice(char choice); // Add this line
 }

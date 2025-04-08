@@ -15,11 +15,11 @@ int main() {
         std::cin >> choice;
         std::cin.ignore();
 
-        if(choice == 8) {
+        if(choice == 9) {
             running = false;
         } else if(choice == 2) {
             Render::showTasks(chores);
-        } else if(choice >= 1 && choice <= 7) {
+        } else if(choice >= 1 && choice <= 8) {
             Logic::handleUserChoice(choice, chores);
         } else {
             Render::printMessage("Invalid choice!");
